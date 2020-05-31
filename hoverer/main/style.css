@@ -1,0 +1,89 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding-left: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #222222;
+  cursor: none;
+}
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px #ff5100 solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@-webkit-keyframes bounce {
+  from {
+    width: 40px;
+    height: 40px;
+  }
+  to {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@keyframes bounce {
+  from {
+    width: 40px;
+    height: 40px;
+  }
+  to {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.cursor .small {
+  width: 10px;
+  height: 10px;
+  background-color: #ff5100;
+  border-radius: 50%;
+  position: relative;
+  left: 40%;
+  top: 40%;
+}
+
+.boxes {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (100px)[5];
+      grid-template-columns: repeat(5, 100px);
+  -ms-grid-rows: minmax(100px, auto);
+      grid-template-rows: minmax(100px, auto);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  line-height: 100px;
+  text-align: center;
+}
+
+.boxes .box {
+  border: 2.5px 0px solid #cccccc;
+  grid-row: span 1;
+  color: white;
+  font-size: 1.5rem;
+  z-index: 1;
+  -webkit-transition: border 0.75s ease;
+  transition: border 0.75s ease;
+}
+
+.boxes .box:hover {
+  border: 2.5px solid #ff5100;
+}
+/*# sourceMappingURL=style.css.map */

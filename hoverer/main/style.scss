@@ -1,0 +1,71 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding-left: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #222222;
+  cursor: none;
+}
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px rgb(255, 81, 0) solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  // animation: bounce 0.5s ease-in infinite alternate;
+  z-index: 1;
+
+  @keyframes bounce {
+    from {
+      width: 40px;
+      height: 40px;
+    }
+    to {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .small {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 81, 0);
+    border-radius: 50%;
+    // border: 2px rgb(255, 81, 0) solid;
+    position: relative;
+    left: 40%;
+    top: 40%;
+  }
+}
+
+.boxes {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: minmax(100px, auto);
+  justify-content: center;
+  align-content: center;
+
+  line-height: 100px;
+  text-align: center;
+  .box {
+    border: 2.5px 0px solid #cccccc;
+    grid-row: span 1;
+    color: white;
+    font-size: 1.5rem;
+    z-index: 1;
+
+    transition: border 0.75s ease;
+  }
+
+  .box:hover {
+    border: 2.5px solid rgb(255, 81, 0);
+  }
+}
